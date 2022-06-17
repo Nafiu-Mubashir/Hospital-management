@@ -1,0 +1,118 @@
+/* .nav-link{
+  line-height: 2em;
+   width: 100%;
+  cursor: pointer;
+ border-radius: 10px;
+ color: aliceblue;
+}
+.n{
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+}
+.text-center{
+  line-height: 5em;
+}
+.offcanvas{
+   background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+   background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+.nav-link:hover, a:hover{
+  background-color: white;
+  color: #d8363a;
+} */
+
+/* a {
+  text-decoration: none;
+  color: black;
+} */
+
+.offcanvas-body {
+  display: grid;
+  /* grid-template-columns: 20% 80%; */
+  /* height: 100vh; */
+}
+
+.nav {
+  /* // display:flex ; */
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+  line-height: 2;
+  font-weight: bold;
+  background-color: white;
+  /* border-right: 10px solid #F8F9F9; */
+}
+
+.navHeader {
+  color: #2F3779 !important;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  width: 100% !important;
+  /* font-size: 2em; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.navLinks {
+  margin-top: 5em;
+}
+
+ul {
+  list-style: none;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li a {
+  /* margin: auto;   */
+  line-height: 3em;
+  width: 100% !important;
+  font-weight: bold;
+  margin-top: 1em;
+  text-align: left !important;
+  align-items: left;
+  justify-content: center;
+  display: flex;
+}
+
+a:hover {
+  background-color: #2F3779;
+  border-radius: 0 0.5em 0.5em 0;
+  color: white;
+}
+.navFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5em;
+}
+a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 3;
+
+}
+
+a:hover {
+  background-color: #2F3779;
+  border-radius: 0 0.5em 0.5em 0;
+  color: white;
+}

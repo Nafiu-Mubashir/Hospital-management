@@ -1,0 +1,17 @@
+.navbar-brand{
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+
+}
+@media (max-width: 767px) {
+  .btn{
+    width: 25%;
+   }
+   .text{
+    display: none;
+  }
+  #image{
+    height: 20px;
+  }
+}

@@ -1,0 +1,41 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  /* background: inherit; */
+}
+.btn{
+  width: 15%;
+  max-width: auto;
+  border-radius: 5px;
+}
+.text{
+  font-size: 10px;
+}
+.mat-toolbar.mat-primary{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* .mat-list-item{
+  text-align: center !important;
+} */
+.mat-nav-list a:hover{
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+@media (max-width: 700px) {
+  .btn{
+    width: 30%;
+  }
+  .text{
+    display: none;
+  }
+}

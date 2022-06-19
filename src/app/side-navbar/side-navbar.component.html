@@ -1,16 +1,33 @@
-<app-side-nav></app-side-nav>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" id="image" height="35" alt="MDB Logo"/><span class="text-dark text">LOTUS HOSPITAL</span></a></mat-toolbar>
+    <mat-nav-list class="">
+      <a mat-list-item href="#"><i class="fa-solid fa-gauge"></i> Link 1</a>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0 btn" href="" type="button" data-mdb-toggle="offcanvas" data-mdb-target="#offcanvasScrolling"   aria-controls="offcanvasScrolling">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" id="image" height="35" alt="MDB Logo"/><span class="text">LOTUS HOSPITAL</span></a>
-    <!-- Collapsible wrapper -->
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
 
-    <!-- Right elements -->
-    <div class="d-flex align-items-center">
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primay" class="bg-light sticky-top shadow">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$" class="">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <!-- <span>newProjects</span> -->
+         <!-- Right elements -->
+    <div class="d-flex align-items-center ms-auto">
       <!-- Icon -->
       <a class="text-reset me-3" href="#">
         <i class="fas fa-shopping-cart"></i>
@@ -93,7 +110,7 @@
         </ul>
       </div>
     </div>
-    <!-- Right elements -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,20 @@
+.lotus{
+  color: #d8363a;
+  font-weight: bolder;
+}
+h1{
+  font-size: 30px;
+  line-height: 1.5em;
+}
+
+
+@media (max-width: 700px) {
+  .d-block{
+    height: 340px !important;
+  }
+  h1{
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-top: 5px;
+  }
+}

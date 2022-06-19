@@ -11,6 +11,26 @@
   input{
     border-bottom: 1px solid black !important;
   }
+  input{
+    border-color: #EC7225 !important;
+    border-bottom-color: #EC7225 !important;
+    /* #dd3675, #b44593 */
+  }
+  .card{
+    width: 40% !important;
+  }
+  label{
+    color: #EC7225 !important;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=date]{
+    color: #EC7225;
+  }
 
   @media (min-width: 768px) {
   .gradient-form {
@@ -24,7 +44,29 @@
   }
   }
   @media (max-width: 768px) {
-    .d{
-      display: none !important;
+    .container{
+      margin-top: 4px !important;
+    }
+    img{
+      width: 50px !important;
+    }
+    .card{
+      width: 100% !important;
+    }
+    .d-flex{
+      flex-direction: column;
+    }
+    .ms-3{
+      margin-left: 0px !important;
+    }
+    .text-center button{
+      margin-top: 10px !important;
+    }
+    p{
+      font-size: 10px !important;
+    }
+    .form-outline{
+      width: 100% !important;
+      margin-left: 0px !important;
     }
   }

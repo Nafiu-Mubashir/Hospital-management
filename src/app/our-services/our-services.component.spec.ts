@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashNavComponent } from './dash-nav.component';
+import { OurServicesComponent } from './our-services.component';
 
-describe('DashNavComponent', () => {
-  let component: DashNavComponent;
-  let fixture: ComponentFixture<DashNavComponent>;
+describe('OurServicesComponent', () => {
+  let component: OurServicesComponent;
+  let fixture: ComponentFixture<OurServicesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashNavComponent ]
+      declarations: [ OurServicesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashNavComponent);
+    fixture = TestBed.createComponent(OurServicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

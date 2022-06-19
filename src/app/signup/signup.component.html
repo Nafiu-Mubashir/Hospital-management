@@ -1,92 +1,105 @@
 <app-navbar></app-navbar>
 <section>
-  <div class="container mt-1">
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
+  <div class="container mt-4">
+        <div class="card rounded-3 m-auto  w-50 text-black">
           <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
-
+            <div class="col">
+              <div class="card-body  mx-md-4">
                 <div class="text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Lotus Hospital</h4>
+                    style="width: 100px;" alt="logo">
+                  <h4 class="mt-1  pb-1">Lotus Hospital</h4>
                 </div>
-
-                <form>
+                <form action="" [formGroup]="userForm" class="from">
                   <div class="d-flex">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline w-50 mb-4">
                       <input type="email" id="form2Example11" class="form-control"
-                        placeholder="Fullname" />
-                      <label class="form-label" for="form2Example11">Fullname</label>
+                        placeholder="Fullname" formControlName="firstname" [class.is-valid]="userForm.get('firstname')?.valid" [class.is-invalid]="userForm.get('firstname')?.invalid && userForm.get('firstname')?.touched">
+                        <label class="form-label" for="form2Example11">Fullname</label>
+                        <div *ngIf="userForm.get('firstname')?.invalid && userForm.get('firstname')?.touched">
+                          <small class="text-danger ms-auto" *ngIf="userForm.get('firstname')?.errors?.['minlength']"> Minimum of ten characters</small>
+                          <small class="text-danger ms-auto" *ngIf="userForm.get('firstname')?.errors?.['required']">Input is required</small>
+                        </div>
                     </div>
-                    <div class="form-outline mb-4 ms-3">
-                      <input type="email" id="form2Example22" class="form-control" placeholder="Email"/>
+                    <div class="form-outline w-50 mb-4 ms-2">
+                      <input type="email" id="form2Example22" class="form-control" placeholder="Email" formControlName="email" [class.is-valid]="userForm.get('email')?.valid" [class.is-invalid]="userForm.get('email')?.invalid && userForm.get('email')?.touched">
                       <label class="form-label" for="form2Example22">Email</label>
+                      <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('email')?.errors?.['required']">Input is required</small>
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('email')?.errors?.['pattern']">Email is not correct</small>
+                      </div>
                     </div>
                   </div>
                   <div class="d-flex">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline w-50 mb-4">
                       <input type="number" id="form2Example11" class="form-control"
-                        placeholder="Age" />
+                        placeholder="Age" formControlName="age" [class.is-valid]="userForm.get('age')?.valid" [class.is-invalid]="userForm.get('age')?.invalid && userForm.get('age')?.touched"/>
                       <label class="form-label" for="form2Example11">Age</label>
+                      <div *ngIf="userForm.get('age')?.invalid && userForm.get('age')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('age')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
-                    <div class="form-outline mb-4 ms-3">
+                    <div class="form-outline w-50 mb-4 ms-2">
                       <input type="text" id="form2Example11" class="form-control"
-                        placeholder="Phone number or email address" />
+                        placeholder="sex or gender" formControlName="sex" [class.is-valid]="userForm.get('sex')?.valid" [class.is-invalid]="userForm.get('sex')?.invalid && userForm.get('sex')?.touched"/>
                       <label class="form-label" for="form2Example11">Sex</label>
+                       <div *ngIf="userForm.get('sex')?.invalid && userForm.get('sex')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('sex')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
                   </div>
                   <div class="d-flex">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 w-50">
                       <input type="date" id="form2Example11" class="form-control"
-                        placeholder="" />
-                      <label class="form-label" for="form2Example11">Date of Birth</label>
+                        placeholder="Date of Birth" formControlName="dateOfBirth" [class.is-valid]="userForm.get('dateOfBirth')?.valid" [class.is-invalid]="userForm.get('dateOfBirth')?.invalid && userForm.get('dateOfBirth')?.touched"/>
+                      <!-- <label class="form-label" for="form2Example11">Date of Birth</label> -->
+                       <div *ngIf="userForm.get('dateOfBirth')?.invalid && userForm.get('dateOfBirth')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('dateOfBirth')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
-                    <div class="form-outline mb-4 ms-3">
+                    <div class="form-outline mb-4 w-50 ms-2">
                       <input type="text" id="form2Example11" class="form-control"
-                        placeholder="Marital status" />
+                        placeholder="Marital status" formControlName="status" [class.is-valid]="userForm.get('status')?.valid" [class.is-invalid]="userForm.get('status')?.invalid && userForm.get('status')?.touched"/>
                       <label class="form-label" for="form2Example11">Marital status</label>
+                       <div *ngIf="userForm.get('status')?.invalid && userForm.get('status')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('status')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
                   </div>
 
                   <div class="d-flex">
-                    <div class="form-outline mb-4">
-                      <input type="number" id="form2Example22" class="form-control" placeholder="Phone number"/>
+                    <div class="form-outline w-50 mb-4">
+                      <input type="number" id="form2Example22" class="form-control" placeholder="Phone number" formControlName="number" [class.is-valid]="userForm.get('number')?.valid" [class.is-invalid]="userForm.get('number')?.invalid && userForm.get('number')?.touched"/>
                       <label class="form-label" for="form2Example22">Phone number</label>
+                       <div *ngIf="userForm.get('number')?.invalid && userForm.get('number')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('number')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
-                    <div class="form-outline mb-4 ms-3">
-                      <input type="password" id="form2Example22" class="form-control" placeholder="Password" />
+                    <div class="form-outline w-50 ms-2">
+                      <input type="password" id="form2Example22" class="form-control" placeholder="Password" formControlName="password" [class.is-valid]="userForm.get('password')?.valid" [class.is-invalid]="userForm.get('password')?.invalid && userForm.get('password')?.touched"/>
                       <label class="form-label" for="form2Example22">Password</label>
+                      <!-- (primEmail.invalid && primEmail.touched) || primEmail.dirty -->
+                       <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+                        <small class="text-danger ms-auto" *ngIf="userForm.get('password')?.errors?.['required']">Input is required</small>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="text-center pt-1 mb-3 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Sign Up</button>
+                  <div class="text-center pt-1 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button"  (click)="register()">Sign Up</button>
                     <a class="text-muted" href="#!">Forgot password?</a>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <button type="button" class="btn btn-outline-danger">Login</button>
+                    <button type="button" class="btn btn-outline-danger w-50">Login</button>
                   </div>
 
                 </form>
 
               </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2 d">
-              <div class="text-white px-3 py-2 p-md-5 mx-md-4">
-                <h4 class="mb-4">We are more than just a Hospiatal</h4>
-                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
   </div>
 </section>

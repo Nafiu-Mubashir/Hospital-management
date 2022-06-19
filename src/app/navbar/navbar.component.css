@@ -1,7 +1,13 @@
 .nav-link{
-  /* color: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593) !important; */
-  color: #d8363a linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593) !important;
+  /* color: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593) !important; linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)*/
+  color: #b44593  !important;
+  color: #ee7724 !important;
+}
+.nav-link:hover{
+  color: #ee7724 !important;
+  color: #b44593  !important;
 }
 .navbar-brand{
   font-size: 13px;
+  color: #ee7724 !important;
 }

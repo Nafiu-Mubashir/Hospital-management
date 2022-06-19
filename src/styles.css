@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+input{
+  border-color: #EC7225 !important;
+  border-bottom-color: #EC7225 !important;
+  /* #dd3675, #b44593 */
+}
